@@ -15,6 +15,7 @@ insert into salesman values(5001,"James Hoog","New York",0.15),(5002,"Nail Knite
 select *from salesman;
 
 ----------------------------------------------------------------------------------------------------------------------------------------
-select c.cust_name,c.city,c.grade,s.name,s.city from customer c join salesman s on c.salesman_id=s.salesman_id where c.grade<100 order by customer_id asc;
+select c.cust_name,c.city,c.grade,s.name as salesman,s.city from customer c left join salesman s on c.salesman_id=s.salesman_id where c.grade<100 order by c.customer_id asc;
+
 
 
